@@ -66,7 +66,7 @@ img { max-width: 100%; display: block; }
   --neutral-300:      rgba(145,151,174,0.38);
   --neutral-400:      #9197ae;
   --neutral-500:      #9197ae;
-  --neutral-600:      #022b6d;
+  --neutral-600:      #9197ae;
   --neutral-700:      #022b6d;
   --neutral-800:      #131f4a;
   --neutral-900:      #131f4a;
@@ -77,7 +77,7 @@ img { max-width: 100%; display: block; }
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   font-family: 'Mont', sans-serif;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.2;
 }
 
