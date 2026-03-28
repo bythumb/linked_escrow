@@ -4,26 +4,24 @@
    ============================================================ */
 
 /* ── Mont Font Face ──────────────────────────────────────── */
-@font-face { font-family: 'Mont'; src: url('fonts/Mont-Thin.otf') format('opentype'); font-weight: 100; font-style: normal; font-display: swap; }
-@font-face { font-family: 'Mont'; src: url('fonts/Mont-ThinItalic.otf') format('opentype'); font-weight: 100; font-style: italic; font-display: swap; }
-@font-face { font-family: 'Mont'; src: url('fonts/Mont-Hairline.otf') format('opentype'); font-weight: 200; font-style: normal; font-display: swap; }
-@font-face { font-family: 'Mont'; src: url('fonts/Mont-HairlineItalic.otf') format('opentype'); font-weight: 200; font-style: italic; font-display: swap; }
-@font-face { font-family: 'Mont'; src: url('fonts/Mont-ExtraLight.otf') format('opentype'); font-weight: 300; font-style: normal; font-display: swap; }
-@font-face { font-family: 'Mont'; src: url('fonts/Mont-ExtraLightItalic.otf') format('opentype'); font-weight: 300; font-style: italic; font-display: swap; }
-@font-face { font-family: 'Mont'; src: url('fonts/Mont-Light.otf') format('opentype'); font-weight: 350; font-style: normal; font-display: swap; }
-@font-face { font-family: 'Mont'; src: url('fonts/Mont-LightItalic.otf') format('opentype'); font-weight: 350; font-style: italic; font-display: swap; }
-@font-face { font-family: 'Mont'; src: url('fonts/Mont-Book.otf') format('opentype'); font-weight: 380; font-style: normal; font-display: swap; }
-@font-face { font-family: 'Mont'; src: url('fonts/Mont-BookItalic.otf') format('opentype'); font-weight: 380; font-style: italic; font-display: swap; }
 @font-face { font-family: 'Mont'; src: url('fonts/Mont-Regular.otf') format('opentype'); font-weight: 400; font-style: normal; font-display: swap; }
-@font-face { font-family: 'Mont'; src: url('fonts/Mont-RegularItalic.otf') format('opentype'); font-weight: 400; font-style: italic; font-display: swap; }
 @font-face { font-family: 'Mont'; src: url('fonts/Mont-SemiBold.otf') format('opentype'); font-weight: 600; font-style: normal; font-display: swap; }
-@font-face { font-family: 'Mont'; src: url('fonts/Mont-SemiBoldItalic.otf') format('opentype'); font-weight: 600; font-style: italic; font-display: swap; }
 @font-face { font-family: 'Mont'; src: url('fonts/Mont-Bold.otf') format('opentype'); font-weight: 700; font-style: normal; font-display: swap; }
-@font-face { font-family: 'Mont'; src: url('fonts/Mont-BoldItalic.otf') format('opentype'); font-weight: 700; font-style: italic; font-display: swap; }
-@font-face { font-family: 'Mont'; src: url('fonts/Mont-Heavy.otf') format('opentype'); font-weight: 800; font-style: normal; font-display: swap; }
-@font-face { font-family: 'Mont'; src: url('fonts/Mont-HeavyItalic.otf') format('opentype'); font-weight: 800; font-style: italic; font-display: swap; }
-@font-face { font-family: 'Mont'; src: url('fonts/Mont-Black.otf') format('opentype'); font-weight: 900; font-style: normal; font-display: swap; }
-@font-face { font-family: 'Mont'; src: url('fonts/Mont-BlackItalic.otf') format('opentype'); font-weight: 900; font-style: italic; font-display: swap; }
+
+/* ── Skip Link (accessibility) ───────────────────────────── */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  background: var(--turquoise);
+  color: var(--dark-blue);
+  padding: 0.75rem 1.5rem;
+  border-radius: 0 0 0.5rem 0.5rem;
+  font-weight: 600;
+  z-index: 200;
+  text-decoration: none;
+}
+.skip-link:focus { top: 0; }
 
 /* ── Reset & Box Model ───────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; }
@@ -1024,7 +1022,11 @@ main { flex: 1; }
 
 .le-form-group input:focus,
 .le-form-group select:focus,
-.le-form-group textarea:focus { border-color: var(--navy); }
+.le-form-group textarea:focus {
+  border-color: var(--navy);
+  outline: 2px solid var(--turquoise);
+  outline-offset: 2px;
+}
 
 .le-form-group textarea { min-height: 7rem; resize: vertical; }
 .le-form-group select { cursor: pointer; }
@@ -1358,4 +1360,21 @@ main { flex: 1; }
   .section { padding: 3rem 1.25rem; }
   .section.large { padding: 4rem 1.25rem; }
   .le-contact-form { padding: 1.5rem; }
+
+  .le-trust-bar__inner { gap: 1rem; }
+  .le-feature-visual { padding: 1.5rem 1rem; }
+  .le-comparison__col { padding: 1.5rem 1rem; }
+  .le-bio-card__headshot { width: 5rem; height: 5rem; }
+
+  .le-form-group input,
+  .le-form-group select,
+  .le-form-group textarea { padding: 1rem 1.2rem; min-height: 48px; }
+
+  .btn-primary, .btn-primary-white { padding: 1rem 2rem; }
+}
+
+/* ── Responsive: 480px ───────────────────────────────────── */
+@media (max-width: 480px) {
+  .le-stats { grid-template-columns: 1fr; }
+  .le-hero__stats { flex-direction: column; gap: 1.25rem; }
 }
