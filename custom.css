@@ -66,7 +66,7 @@ img { max-width: 100%; display: block; }
   --neutral-300:      rgba(145,151,174,0.38);
   --neutral-400:      #9197ae;
   --neutral-500:      #9197ae;
-  --neutral-600:      #9197ae;
+  --neutral-600:      #022b6d;
   --neutral-700:      #022b6d;
   --neutral-800:      #131f4a;
   --neutral-900:      #131f4a;
@@ -77,7 +77,7 @@ img { max-width: 100%; display: block; }
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   font-family: 'Mont', sans-serif;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.2;
 }
 
@@ -131,9 +131,13 @@ h1, h2, h3, h4, h5, h6 {
   gap: 0.5rem;
   border: none;
   cursor: pointer;
-  transition: opacity 0.2s;
+  transition: all 0.2s ease-out;
 }
-.btn-primary:hover { opacity: 0.9; }
+.btn-primary:hover {
+  opacity: 0.95;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(90,233,215,0.3);
+}
 
 .btn-primary-white {
   background: white;
@@ -147,9 +151,13 @@ h1, h2, h3, h4, h5, h6 {
   gap: 0.5rem;
   border: 2px solid var(--neutral-200);
   cursor: pointer;
-  transition: opacity 0.2s;
+  transition: all 0.2s ease-out;
 }
-.btn-primary-white:hover { background: var(--neutral-100); }
+.btn-primary-white:hover {
+  background: var(--neutral-100);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(2,43,109,0.08);
+}
 
 /* ── Section Wrappers ────────────────────────────────────── */
 .set-2-block-wrap {
@@ -246,6 +254,13 @@ h1, h2, h3, h4, h5, h6 {
 .nav__link.set-2.active {
   background: var(--neutral-100);
   font-weight: 600;
+  border-bottom: 2px solid var(--turquoise);
+}
+
+.nav__link.set-2:focus-visible {
+  outline: 2px solid var(--turquoise);
+  outline-offset: 4px;
+  border-radius: 0.5rem;
 }
 
 .header-actions {
@@ -275,9 +290,9 @@ h1, h2, h3, h4, h5, h6 {
 .mob-menu.is-open { display: flex; }
 .mob-menu .nav__link {
   color: var(--navy-dark);
-  font-size: 1rem;
+  font-size: 1.05rem;
   font-weight: 500;
-  padding: 0.65rem 0;
+  padding: 0.85rem 0.75rem;
   border-bottom: 1px solid var(--neutral-100);
   display: block;
 }
@@ -370,7 +385,7 @@ main { flex: 1; }
 
 /* ── Page Hero (inner pages) ─────────────────────────────── */
 .le-page-hero {
-  background: white;
+  background: linear-gradient(160deg, #f7f9fc 0%, #ffffff 60%);
   border-bottom: 1px solid var(--neutral-200);
   padding: 5rem 6vw 4rem;
   position: relative;
@@ -529,9 +544,12 @@ main { flex: 1; }
   border: 1px solid var(--neutral-200);
   border-radius: 1.11rem;
   padding: 1.75rem 1.5rem;
-  transition: box-shadow 0.2s;
+  transition: all 0.2s ease-out;
 }
-.le-card:hover { box-shadow: 0 6px 24px rgba(2,43,109,0.08); }
+.le-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(2,43,109,0.12);
+}
 
 .le-card__icon {
   width: 2.75rem;
@@ -1273,7 +1291,7 @@ main { flex: 1; }
   transition: color 0.15s;
   display: block;
 }
-.footer-nav-link:hover { color: var(--navy-dark); }
+.footer-nav-link:hover { color: var(--turquoise); }
 
 .footer-bot {
   margin-top: 3rem;
@@ -1282,6 +1300,7 @@ main { flex: 1; }
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  font-size: 0.88rem;
 }
 
 /* ── Visual label pill ───────────────────────────────────── */
