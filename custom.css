@@ -108,7 +108,7 @@ h1, h2, h3, h4, h5, h6 {
 /* ── Components ──────────────────────────────────────────── */
 .tag {
   background: var(--turquoise);
-  color: #131f4a;
+  color: var(--dark-blue);
   border-radius: 2rem;
   padding: 0.3rem 0.85rem;
   font-size: 0.75rem;
@@ -116,6 +116,7 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   display: inline-block;
+  text-align: center;
 }
 
 .btn-primary {
@@ -1332,6 +1333,7 @@ main { flex: 1; }
 @media (max-width: 768px) {
   .nav.set-2.desktop-nav { display: none; }
   .burger-icon-wrap { display: flex; }
+  .header-actions .btn-primary { display: none; }
 
   .le-hero { min-height: 80vh; padding: 5rem 1.25rem 3rem; }
   .le-hero__stats { gap: 1.5rem; }
