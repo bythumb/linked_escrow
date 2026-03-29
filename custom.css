@@ -372,7 +372,8 @@ main { flex: 1; }
   font-size: 0.85rem;
   color: rgba(255,255,255,0.65);
   margin-top: 0.3rem;
-  max-width: 10rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* ── Page Hero (inner pages) ─────────────────────────────── */
@@ -1399,5 +1400,7 @@ main { flex: 1; }
 /* ── Responsive: 480px ───────────────────────────────────── */
 @media (max-width: 480px) {
   .le-stats { grid-template-columns: 1fr; }
-  .le-hero__stats { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+  .le-hero__stats { grid-template-columns: repeat(2, 1fr); gap: 0.75rem; }
+  .le-hero__stat-num { font-size: 1.25rem; }
+  .le-hero__stat-label { font-size: 0.75rem; }
 }
