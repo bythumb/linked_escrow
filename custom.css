@@ -1368,6 +1368,16 @@ main { flex: 1; }
   .le-cta-banner { padding: 3.5rem 1.5rem; }
   .le-delivers-card { padding: 3rem 1.5rem 2.5rem; }
 
+  /* Hide feature visual cards on mobile (duplicates checklist) */
+  .le-feature-visual { display: none; }
+
+  /* Unify button alignment: always centered on mobile */
+  .btn-primary, .btn-primary-white { display: flex; justify-content: center; width: 100%; }
+  .le-hero__ctas { flex-direction: column; align-items: stretch; }
+  .le-cta-banner__actions { flex-direction: column; align-items: stretch; }
+  .text-center .btn-primary { width: auto; }
+  .set-2-block-wrap .btn-primary { width: auto; text-align: center; }
+
   .header-inner { height: 3.75rem; }
   .is-header { padding: 0 1.25rem; }
   .le-cta-banner .heading-3 { font-size: 1.85rem; }
