@@ -3,10 +3,8 @@
    Standalone stylesheet — no Webflow dependency
    ============================================================ */
 
-/* ── Mont Font Face ──────────────────────────────────────── */
-@font-face { font-family: 'Mont'; src: url('fonts/Mont-Regular.otf') format('opentype'); font-weight: 400; font-style: normal; font-display: swap; }
-@font-face { font-family: 'Mont'; src: url('fonts/Mont-SemiBold.otf') format('opentype'); font-weight: 600; font-style: normal; font-display: swap; }
-@font-face { font-family: 'Mont'; src: url('fonts/Mont-Bold.otf') format('opentype'); font-weight: 700; font-style: normal; font-display: swap; }
+/* ── Montserrat Font (temporary replacement for Mont) ────── */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
 
 /* ── Skip Link (accessibility) ───────────────────────────── */
 .skip-link {
@@ -31,7 +29,7 @@ html {
 }
 
 body {
-  font-family: 'Mont', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   margin: 0;
   padding: 0;
   color: var(--neutral-800);
@@ -76,16 +74,16 @@ img { max-width: 100%; display: block; }
 /* ── Base Typography ─────────────────────────────────────── */
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
-  font-family: 'Mont', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   line-height: 1.2;
 }
 
 .heading-1 { font-size: clamp(2.5rem, 5vw, 4rem); color: var(--navy-dark); letter-spacing: -0.02em; }
 .heading-2 { font-size: clamp(2rem, 4vw, 3rem); color: var(--navy-dark); letter-spacing: -0.015em; }
-.heading-3 { font-size: clamp(1.65rem, 3vw, 2.4rem); color: var(--navy-dark); letter-spacing: -0.01em; font-family: 'Mont', sans-serif; }
-.heading-4 { font-size: clamp(1.2rem, 2vw, 1.6rem); color: var(--navy-dark); letter-spacing: -0.005em; font-family: 'Mont', sans-serif; }
-.heading-5 { font-size: 1.1rem; color: var(--navy-dark); font-family: 'Mont', sans-serif; }
+.heading-3 { font-size: clamp(1.65rem, 3vw, 2.4rem); color: var(--navy-dark); letter-spacing: -0.01em; font-family: 'Montserrat', sans-serif; }
+.heading-4 { font-size: clamp(1.2rem, 2vw, 1.6rem); color: var(--navy-dark); letter-spacing: -0.005em; font-family: 'Montserrat', sans-serif; }
+.heading-5 { font-size: 1.1rem; color: var(--navy-dark); font-family: 'Montserrat', sans-serif; }
 
 .body-m { font-size: 1rem; line-height: 1.7; }
 .body-s { font-size: 0.9rem; line-height: 1.65; }
@@ -214,7 +212,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.2;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  font-family: 'Mont', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .le-logo-icon {
@@ -403,7 +401,7 @@ main { flex: 1; }
 
 /* ── Brand Typography Overrides ─────────────────────────── */
 .heading-3, .heading-4, .heading-5 {
-  font-family: 'Mont', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .heading-3 { letter-spacing: -0.01em; }
@@ -1024,7 +1022,7 @@ main { flex: 1; }
   border: 1px solid var(--neutral-300);
   border-radius: 0.6rem;
   padding: 0.8rem 1rem;
-  font-family: 'Mont', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 0.97rem;
   color: var(--neutral-800);
   background: white;
