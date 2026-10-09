@@ -12,7 +12,7 @@
   top: -100%;
   left: 1rem;
   background: var(--turquoise);
-  color: var(--dark-blue);
+  color: var(--blue);
   padding: 0.75rem 1.5rem;
   border-radius: 0 0 0.5rem 0.5rem;
   font-weight: 600;
@@ -46,8 +46,8 @@ img { max-width: 100%; display: block; }
 :root {
   --white:            #ffffff;   /* White */
   --gray-light:       #f7f9fc;   /* Gray */
-  --turquoise-light:  #9ef8ec;   /* Light Turquoise */
-  --turquoise:        #5ae9d7;   /* Turquoise */
+  --turquoise-light:  #EBF3FF;   /* Light Turquoise */
+  --turquoise:        #EBF3FF;   /* Turquoise */
   --orange:           #ff7958;   /* Orange */
   --blue:             #022b6d;   /* Blue */
   --gray:             #9197ae;   /* Dark Gray */
@@ -106,7 +106,7 @@ h1, h2, h3, h4, h5, h6 {
 /* ── Components ──────────────────────────────────────────── */
 .tag {
   background: var(--turquoise);
-  color: var(--dark-blue);
+  color: var(--blue);
   border-radius: 2rem;
   padding: 0.4rem 1.1rem 0.4rem calc(1.1rem + 0.08em);
   font-size: 0.75rem;
@@ -118,8 +118,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-primary {
-  background: var(--turquoise);
-  color: #131f4a;
+  background: var(--blue);
+  color: white;
   border-radius: 0.83rem;
   padding: 0.9rem 1.94rem;
   font-weight: 600;
@@ -300,7 +300,7 @@ main { flex: 1; }
 .le-hero {
   min-height: 92vh;
   background:
-    linear-gradient(to bottom, rgba(19,31,74,0.82) 0%, rgba(19,31,74,0.75) 60%, rgba(19,31,74,0.9) 100%),
+    linear-gradient(to bottom, rgba(19,31,74,0.68) 0%, rgba(19,31,74,0.58) 60%, rgba(19,31,74,0.78) 100%),
     url('images/house-exterior.jpg') center center / cover no-repeat;
   display: flex;
   align-items: center;
@@ -362,7 +362,7 @@ main { flex: 1; }
 .le-hero__stat-num {
   font-size: 2rem;
   font-weight: 700;
-  color: var(--turquoise);
+  color: white;
   line-height: 1.1;
 }
 
@@ -473,7 +473,7 @@ main { flex: 1; }
   height: 2.5rem;
   border-radius: 50%;
   background: var(--turquoise);
-  color: var(--navy-dark);
+  color: var(--blue);
   font-weight: 700;
   font-size: 1rem;
   display: flex;
@@ -521,10 +521,10 @@ main { flex: 1; }
   width: 1.25rem;
   height: 1.25rem;
   border-radius: 50%;
-  background: var(--turquoise);
+  background: var(--blue);
   flex-shrink: 0;
   margin-top: 0.15rem;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M2 6l3 3 5-5' stroke='%23131f4a' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M2 6l3 3 5-5' stroke='%23022b6d' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -651,7 +651,7 @@ main { flex: 1; }
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M2 6l3 3 5-5' stroke='%23131f4a' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M2 6l3 3 5-5' stroke='%23022b6d' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -679,7 +679,7 @@ main { flex: 1; }
   left: 0;
   top: -0.25rem;
   font-size: 2.5rem;
-  color: var(--turquoise);
+  color: var(--blue);
   line-height: 1;
   font-family: Georgia, serif;
 }
@@ -709,7 +709,7 @@ main { flex: 1; }
 
 .le-delivers-card .le-checklist li::before {
   background: var(--turquoise);
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M2 6l3 3 5-5' stroke='%23131f4a' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M2 6l3 3 5-5' stroke='%23022b6d' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -908,7 +908,7 @@ main { flex: 1; }
   align-items: center;
   gap: 0.5rem;
   background: var(--turquoise);
-  color: var(--navy-dark);
+  color: var(--blue);
   padding: 0.6rem 1.25rem;
   border-radius: 0.6rem;
   font-weight: 600;
@@ -1034,7 +1034,7 @@ main { flex: 1; }
 .le-form-group select:focus,
 .le-form-group textarea:focus {
   border-color: var(--navy);
-  outline: 2px solid var(--turquoise);
+  outline: 2px solid var(--blue);
   outline-offset: 2px;
 }
 
@@ -1132,13 +1132,13 @@ main { flex: 1; }
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--turquoise);
+  color: var(--blue);
   margin-bottom: 0.75rem;
   display: block;
 }
 .le-eyebrow.dark { color: var(--navy-dark); }
-.le-eyebrow.white { color: var(--turquoise); }
-.set-2-block-wrap.dark .le-eyebrow { color: var(--turquoise); }
+.le-eyebrow.white { color: white; }
+.set-2-block-wrap.dark .le-eyebrow { color: white; }
 
 /* ── Comparison Columns ──────────────────────────────────── */
 .le-comparison {
@@ -1164,7 +1164,7 @@ main { flex: 1; }
   font-weight: 700;
   margin-bottom: 0.5rem;
 }
-.le-comparison__col.featured .le-comparison__title { color: var(--turquoise); }
+.le-comparison__col.featured .le-comparison__title { color: white; }
 .le-comparison__col:not(.featured) .le-comparison__title { color: var(--navy-dark); }
 
 .le-comparison__sub {
@@ -1191,12 +1191,12 @@ main { flex: 1; }
   display: inline-flex;
   align-items: center;
   gap: 0.75rem;
-  background: rgba(90,233,215,0.1);
-  border: 1px solid rgba(90,233,215,0.3);
+  background: var(--turquoise-light);
+  border: 1px solid rgba(2,43,109,0.2);
   border-radius: 0.75rem;
   padding: 0.75rem 1.25rem;
   font-size: 0.88rem;
-  color: var(--turquoise);
+  color: var(--blue);
   font-weight: 500;
   margin-top: 1.25rem;
   flex-wrap: wrap;
@@ -1282,7 +1282,7 @@ main { flex: 1; }
   transition: color 0.15s;
   display: block;
 }
-.footer-nav-link:hover { color: var(--turquoise); }
+.footer-nav-link:hover { color: var(--dark-blue); }
 
 .footer-bot {
   margin-top: 3rem;
@@ -1311,7 +1311,7 @@ main { flex: 1; }
 
 .le-label-pill span {
   background: var(--turquoise);
-  color: var(--navy-dark);
+  color: var(--blue);
   border-radius: 1rem;
   padding: 0.2rem 0.6rem;
   font-size: 0.78rem;
