@@ -940,6 +940,90 @@ main { flex: 1; }
   margin-bottom: 0.5rem;
 }
 
+/* ── Team Preview (Homepage) ─────────────────────────────── */
+.le-team-preview__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+  max-width: 44rem;
+  margin: 0 auto;
+}
+
+.le-team-preview__card {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  background: white;
+  border: 1px solid var(--neutral-200);
+  border-radius: 1.11rem;
+  padding: 1.25rem;
+  transition: all 0.2s ease-out;
+}
+
+.le-team-preview__card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(2,43,109,0.1);
+}
+
+.le-team-preview__headshot {
+  width: 4.25rem;
+  height: 4.25rem;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.le-team-preview__name {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--navy-dark);
+}
+
+.le-team-preview__role {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 0.35rem;
+}
+
+.le-team-preview__body {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--neutral-600);
+}
+
+/* ── Tech Banner (Link.ai) ───────────────────────────────── */
+.le-tech-banner {
+  text-align: center;
+  background: var(--neutral-100);
+  border-radius: 1.39rem;
+  padding: 3rem 2rem;
+}
+
+.le-tech-banner__logo {
+  height: 1.75rem;
+  width: auto;
+  margin: 0 auto 1.5rem;
+}
+
+.le-tech-banner__features {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 0.5rem 0 2rem;
+}
+
+.le-tech-banner__feature {
+  background: white;
+  border: 1px solid var(--neutral-200);
+  border-radius: 2rem;
+  padding: 0.5rem 1.1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--navy);
+}
+
 /* ── License Box ─────────────────────────────────────────── */
 .le-license-box {
   border: 1px solid var(--neutral-200);
@@ -1353,6 +1437,7 @@ main { flex: 1; }
   .le-cards-grid { grid-template-columns: 1fr; }
   .le-cards-grid-2 { grid-template-columns: 1fr; }
   .le-cards-grid-4 { grid-template-columns: 1fr; }
+  .le-team-preview__grid { grid-template-columns: 1fr; }
   .le-stats { grid-template-columns: repeat(2, 1fr); }
   .le-two-col { grid-template-columns: 1fr; gap: 2rem; }
   .le-comparison { grid-template-columns: 1fr; }
