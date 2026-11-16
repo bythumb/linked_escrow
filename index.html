@@ -87,7 +87,7 @@
       <div class="container">
         <div class="text-center mb-6">
           <span class="le-eyebrow dark">A Personal Touch</span>
-          <h2 class="heading-3 mb-2">Real People, Not a Call Center</h2>
+          <h2 class="heading-3 mb-2">A Relationship, Not a Transaction</h2>
           <p class="body-m" style="max-width: 36rem; margin: 0 auto; color: var(--neutral-600);">Every escrow is handled by a dedicated officer who knows you by name — Lisa or Beth are who you'll actually talk to.</p>
         </div>
         <div class="le-team-preview__grid">
@@ -105,6 +105,58 @@
             <p class="le-team-preview__body">40+ years in real estate and 24+ years specializing in escrow, bringing steady guidance to every file.</p>
             <span class="le-team-preview__link">Meet Beth →</span>
           </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- LINK.AI TECH -->
+    <section class="section large" id="link-ai">
+      <div class="container">
+        <div class="le-feature-row">
+          <div>
+            <img src="images/logo-link.png" alt="Link.ai" class="le-techtour-logo">
+            <span class="le-eyebrow dark">Our Technology</span>
+            <h2 class="heading-3 mb-3">We've Got Your Back. So Does Link.ai.</h2>
+            <p class="body-m mb-4" style="color: var(--neutral-600);">Link.ai is our free AI platform for real estate agents — built by the same team that already has your back on every closing. Think of it as a preview of the thoughtful service you get when you work with us, long before you ever open a file.</p>
+            <ul class="le-checklist mb-4">
+              <li>Free for every agent — no monthly system to rent</li>
+              <li>AI you own, not AI that replaces you</li>
+              <li>More time for your clients</li>
+              <li>Built by the escrow team real estate agents already trust</li>
+            </ul>
+            <a href="https://link.ai" target="_blank" rel="noopener" class="btn-primary w-inline-block"><div>Explore Link.ai</div></a>
+          </div>
+
+          <div class="le-techtour">
+            <span class="le-techtour__label">A Quick Tour</span>
+            <div class="ltour" aria-roledescription="carousel" aria-label="Link.ai product tour">
+              <div class="ltour-media">
+                <div class="ltour-shot active"><img src="images/product-ask-link.png" width="1031" height="829" alt="Link.ai Copilot home with an Ask Link prompt and suggested tasks"></div>
+                <div class="ltour-shot"><img src="images/product-lead-nurture.png" width="984" height="754" loading="lazy" alt="Lead Nurture SMS thread with Kevin P. about touring 3+ bed homes in Carlsbad"></div>
+                <div class="ltour-shot"><img src="images/product-listing-to-social.png" width="992" height="518" loading="lazy" alt="Selected listing 24741 Ganymede with a Create post button"></div>
+                <div class="ltour-shot"><img src="images/product-social-calendar.png" width="992" height="377" loading="lazy" alt="October social marketing calendar with an Add post slot on Wednesday"></div>
+              </div>
+              <div class="ltour-copy">
+                <div class="ltour-text active" role="group" aria-roledescription="slide" aria-label="1 of 4">
+                  <p class="ltour-heading">Ask Link</p>
+                  <p class="ltour-sub">Describe what you want to get done and Copilot will prepare it for review.</p>
+                </div>
+                <div class="ltour-text" role="group" aria-roledescription="slide" aria-label="2 of 4">
+                  <p class="ltour-heading">Lead Nurture</p>
+                  <p class="ltour-sub">Saved search: 3+ Beds, Carlsbad</p>
+                </div>
+                <div class="ltour-text" role="group" aria-roledescription="slide" aria-label="3 of 4">
+                  <p class="ltour-heading">Turn listings into content.</p>
+                  <p class="ltour-sub">Choose a home. Start your next social post.</p>
+                </div>
+                <div class="ltour-text" role="group" aria-roledescription="slide" aria-label="4 of 4">
+                  <p class="ltour-heading">Keep your marketing moving.</p>
+                  <p class="ltour-sub">Connect your channels. Make space for your next post.</p>
+                </div>
+              </div>
+              <div class="ltour-dots" role="tablist" aria-label="Choose slide"></div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -326,24 +378,6 @@
       </div>
     </section>
 
-    <!-- LINK.AI TECH -->
-    <section class="section">
-      <div class="container">
-        <div class="le-tech-banner">
-          <img src="images/logo-horizontal.png" alt="Linked Escrow" class="le-tech-banner__logo">
-          <span class="le-eyebrow dark">Our Technology</span>
-          <h2 class="heading-3 mb-3">We Also Built Link.ai — Free AI for Real Estate Agents</h2>
-          <p class="body-m mb-4" style="max-width: 40rem; margin: 0 auto; color: var(--neutral-600);">Link.ai is a free AI platform created by Linked Escrow to help agents generate more leads and spend less time on busywork — AI you own, not AI that replaces you.</p>
-          <div class="le-tech-banner__features">
-            <div class="le-tech-banner__feature">Ask Link AI Copilot</div>
-            <div class="le-tech-banner__feature">Lead Generation &amp; Nurture</div>
-            <div class="le-tech-banner__feature">Marketing Automation</div>
-          </div>
-          <a href="https://link.ai" target="_blank" rel="noopener" class="btn-primary w-inline-block"><div>Explore Link.ai</div></a>
-        </div>
-      </div>
-    </section>
-
     <!-- DFPI COMPLIANCE -->
     <section class="section large">
       <div class="container">
@@ -484,6 +518,61 @@
   document.querySelector('.burger-icon-wrap').addEventListener('click', function() {
     document.querySelector('.mob-menu').classList.toggle('is-open');
   });
+</script>
+<script>
+/* Link.ai product tour — small auto-rotating carousel */
+(() => {
+  const root = document.querySelector('.ltour');
+  if (!root) return;
+  const shots = [...root.querySelectorAll('.ltour-shot')];
+  const texts = [...root.querySelectorAll('.ltour-text')];
+  const dotsWrap = root.querySelector('.ltour-dots');
+  const DURATION = 5000;
+  const n = shots.length;
+  let idx = 0, timer = null, hovering = false, inView = false;
+
+  const dots = shots.map((_, i) => {
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'ltour-dot' + (i === 0 ? ' active' : '');
+    b.setAttribute('role', 'tab');
+    b.setAttribute('aria-label', 'Slide ' + (i + 1));
+    b.setAttribute('aria-selected', i === 0 ? 'true' : 'false');
+    b.addEventListener('click', () => go(i));
+    dotsWrap.appendChild(b);
+    return b;
+  });
+
+  function render() {
+    shots.forEach((el, i) => el.classList.toggle('active', i === idx));
+    texts.forEach((el, i) => el.classList.toggle('active', i === idx));
+    dots.forEach((d, i) => {
+      d.classList.toggle('active', i === idx);
+      d.setAttribute('aria-selected', i === idx ? 'true' : 'false');
+    });
+  }
+  function schedule() {
+    clearTimeout(timer);
+    if (hovering || !inView) return;
+    timer = setTimeout(() => go(idx + 1), DURATION);
+  }
+  function go(i) {
+    idx = (i + n) % n;
+    render();
+    schedule();
+  }
+
+  root.addEventListener('pointerenter', e => { if (e.pointerType === 'mouse') { hovering = true; clearTimeout(timer); } });
+  root.addEventListener('pointerleave', e => { if (e.pointerType === 'mouse') { hovering = false; schedule(); } });
+
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(([e]) => { inView = e.isIntersecting; inView ? schedule() : clearTimeout(timer); }, { threshold: 0.2 }).observe(root);
+  } else {
+    inView = true; schedule();
+  }
+
+  render();
+})();
 </script>
 </body>
 </html>
