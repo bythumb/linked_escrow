@@ -988,9 +988,9 @@ main { flex: 1; }
 }
 
 .le-team-preview__headshot {
-  width: 11rem;
-  height: 11rem;
-  border-radius: 50%;
+  width: 14rem;
+  height: 14rem;
+  border-radius: 1.39rem;
   object-fit: cover;
   flex-shrink: 0;
   margin-bottom: 1.75rem;
