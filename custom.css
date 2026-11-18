@@ -966,42 +966,55 @@ main { flex: 1; }
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
-  max-width: 74rem;
+  max-width: 76rem;
   margin: 0 auto;
 }
 
 .le-team-preview__card {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
   background: white;
   border: 1px solid var(--neutral-200);
   border-radius: 1.39rem;
-  padding: 2.75rem 2rem 2.25rem;
-  transition: all 0.2s ease-out;
+  overflow: hidden;
+  transition: transform 0.25s ease-out, box-shadow 0.25s ease-out;
 }
 
 .le-team-preview__card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 18px 40px rgba(2,43,109,0.14);
+  transform: translateY(-6px);
+  box-shadow: 0 24px 48px rgba(2,43,109,0.16);
+}
+
+.le-team-preview__photo {
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background: var(--neutral-100);
 }
 
 .le-team-preview__headshot {
-  width: 14rem;
-  height: 14rem;
-  border-radius: 1.39rem;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  flex-shrink: 0;
-  margin-bottom: 1.75rem;
-  box-shadow: 0 0 0 6px var(--turquoise);
+  object-position: center top;
+  display: block;
+  transition: transform 0.6s ease-out;
+}
+
+.le-team-preview__card:hover .le-team-preview__headshot { transform: scale(1.04); }
+
+.le-team-preview__info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1;
+  padding: 1.75rem 1.75rem 2rem;
 }
 
 .le-team-preview__name {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   font-weight: 700;
   color: var(--navy-dark);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.6rem;
 }
 
 .le-team-preview__role {
@@ -1012,21 +1025,87 @@ main { flex: 1; }
   font-weight: 600;
   padding: 0.4rem 1rem;
   border-radius: 2rem;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.1rem;
 }
 
 .le-team-preview__body {
   font-size: 0.98rem;
   line-height: 1.65;
   color: var(--neutral-600);
-  max-width: 21rem;
   margin-bottom: 1.5rem;
 }
 
 .le-team-preview__link {
+  margin-top: auto;
   font-size: 0.92rem;
   font-weight: 600;
   color: var(--navy);
+}
+
+/* ── People (Team page) ──────────────────────────────────── */
+.le-people {
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+  max-width: 76rem;
+  margin: 0 auto;
+}
+
+.le-person {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+  gap: 4.5rem;
+  align-items: start;
+}
+
+.le-person--reverse { grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); }
+.le-person--reverse .le-person__photo { order: 2; }
+
+.le-person__photo {
+  position: sticky;
+  top: 6.5rem;
+  aspect-ratio: 4 / 5;
+  border-radius: 1.75rem;
+  overflow: hidden;
+  background: var(--neutral-100);
+  box-shadow: 0 30px 60px -20px rgba(2,43,109,0.28);
+}
+
+.le-person__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+.le-person__content { padding-top: 1.5rem; }
+
+.le-person .le-bio-card__name {
+  font-size: 2.75rem;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.6rem;
+}
+
+.le-person .le-bio-card__role {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.le-person__divider {
+  height: 1px;
+  background: var(--neutral-200);
+  margin: 1.75rem 0;
+}
+
+.le-person .le-bio-card__bio { font-size: 1.02rem; }
+
+@media (max-width: 1100px) {
+  .le-person { gap: 2.5rem; }
+  .le-person .le-bio-card__name { font-size: 2.25rem; }
+  .le-team-preview__grid { gap: 1.25rem; }
+  .le-team-preview__info { padding: 1.5rem 1.25rem 1.75rem; }
 }
 
 /* ── Link.ai Product Tour ────────────────────────────────── */
@@ -1535,7 +1614,12 @@ main { flex: 1; }
   .le-cards-grid { grid-template-columns: 1fr; }
   .le-cards-grid-2 { grid-template-columns: 1fr; }
   .le-cards-grid-4 { grid-template-columns: 1fr; }
-  .le-team-preview__grid { grid-template-columns: 1fr; }
+  .le-team-preview__grid { grid-template-columns: 1fr; max-width: 28rem; }
+  .le-person, .le-person--reverse { grid-template-columns: 1fr; gap: 2rem; }
+  .le-person--reverse .le-person__photo { order: 0; }
+  .le-person__photo { position: static; max-width: 30rem; }
+  .le-person__content { padding-top: 0; }
+  .le-people { gap: 4rem; }
   .le-stats { grid-template-columns: repeat(2, 1fr); }
   .le-two-col { grid-template-columns: 1fr; gap: 2rem; }
   .le-comparison { grid-template-columns: 1fr; }
@@ -1574,6 +1658,7 @@ main { flex: 1; }
   .le-feature-visual { padding: 1.5rem 1rem; }
   .le-comparison__col { padding: 1.5rem 1rem; }
   .le-bio-card__headshot { width: 5rem; height: 5rem; }
+  .le-person .le-bio-card__name { font-size: 2.1rem; }
 
   .le-form-group input,
   .le-form-group select,
